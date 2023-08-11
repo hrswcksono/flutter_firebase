@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "460985078124",
+    "project_id": "flutter-coba-97178",
+    "storage_bucket": "flutter-coba-97178.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460985078124:android:47f923e5fe6bff9f50a349",
+        "android_client_info": {
+          "package_name": "com.example.fire_auth_serv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460985078124-22jha6t1u1huscfj768g0pnpo3nptd3q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBP-JDFbbDndS6W_EQGqYwNsaMauixlT-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460985078124-22jha6t1u1huscfj768g0pnpo3nptd3q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "460985078124-72nrsg81pkrv4kc7h1n9aa3htvuncvtr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.todoApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460985078124:android:0f2bdc84e8c4d20650a349",
+        "android_client_info": {
+          "package_name": "com.example.todo_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460985078124-22jha6t1u1huscfj768g0pnpo3nptd3q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBP-JDFbbDndS6W_EQGqYwNsaMauixlT-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460985078124-22jha6t1u1huscfj768g0pnpo3nptd3q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "460985078124-72nrsg81pkrv4kc7h1n9aa3htvuncvtr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.todoApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
