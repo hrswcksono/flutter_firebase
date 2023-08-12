@@ -1,17 +1,21 @@
+import 'package:fire_auth_serv/firebase_service.dart';
 import 'package:fire_auth_serv/login_page.dart';
+import 'package:fire_auth_serv/note_page.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
-void main() async {
-  // await Firebase.initializeApp(
-  //   options: DefaultFirebaseOptions.currentPlatform,
-  // );
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
+  firebaseService();
+  runApp(const MyApp());
+}
+
+Future<void> firebaseService() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+  await FirebaseService().initialize();
 }
 
 class MyApp extends StatelessWidget {

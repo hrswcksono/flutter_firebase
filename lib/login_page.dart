@@ -1,3 +1,4 @@
+import 'package:fire_auth_serv/note_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -17,12 +18,22 @@ class LoginPage extends StatelessWidget {
     });
   }
 
-  void login() async {
+  void disposeTF() {
+    email.clear();
+    password.clear();
+  }
+
+  void login(BuildContext context) async {
     try {
       final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: email.text,
         password: password.text,
       );
+      print(credential);
+      disposeTF();
+      // ignore: use_build_context_synchronously
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (context) => NotePage()));
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
         print('No user found for that email.');
@@ -30,10 +41,6 @@ class LoginPage extends StatelessWidget {
         print('Wrong password provided for that user.');
       }
     }
-  }
-
-  void logout() async {
-    await FirebaseAuth.instance.signOut();
   }
 
   @override
@@ -67,24 +74,19 @@ class LoginPage extends StatelessWidget {
               children: [
                 ElevatedButton(
                     onPressed: () {
-                      login();
+                      login(context);
                     },
                     child: const Text('Login')),
                 ElevatedButton(
                     onPressed: () {
-                      logout();
+                      testCreadential();
                     },
-                    child: const Text('Logout')),
+                    child: const Text('Test Credential')),
               ],
             ),
             const SizedBox(
               height: 20,
             ),
-            ElevatedButton(
-                onPressed: () {
-                  testCreadential();
-                },
-                child: const Text('Test Credential'))
           ],
         ),
       ),
